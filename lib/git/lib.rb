@@ -479,6 +479,14 @@ module Git
         command('stash apply')
       end
     end
+
+    def stash_pop(id = nil)
+      if id
+        command('stash pop', [id])
+      else
+        command('stash pop')
+      end
+    end
     
     def stash_clear
       command('stash clear')
