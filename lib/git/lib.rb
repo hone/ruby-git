@@ -579,7 +579,7 @@ module Git
     end
     
     def push(remote, branch = 'master', tags = false)
-      command('push', [remote, branch])
+      command('push', [remote, branch]) if branch
       command('push', ['--tags', remote]) if tags
     end
 
